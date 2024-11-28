@@ -20,10 +20,10 @@ public class EmployeeManager {
         if (args[0].equals("l")) {
             System.out.println("Loading data ...");
             try {
-                BufferedReader reader = new BufferedReader(
+                BufferedReader r = new BufferedReader(
                     new InputStreamReader(
                         new FileInputStream("employees.txt")));
-                String l = reader.readLine();
+                String l = r.readLine();
                 String e[] = l.split(",");
                 for (String employee : e) {
                     System.out.println(employee);
@@ -33,10 +33,10 @@ public class EmployeeManager {
         } else if (args[0].equals("s")) {
             System.out.println("Loading data ...");
             try {
-                BufferedReader reader = new BufferedReader(
-                    new InputStreamReader(
-                        new FileInputStream("employees.txt")));
-                String l = reader.readLine();
+                BufferedReader r = new BufferedReader(
+                        new InputStreamReader(
+                                new FileInputStream("employees.txt")));
+                String l = r.readLine();
                 System.out.println(l);
                 String e[] = l.split(",");
                 Random rand = new Random();
